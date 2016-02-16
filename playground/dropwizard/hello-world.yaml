@@ -1,0 +1,6 @@
+template: Hello, %s!
+defaultName: Stranger
+server:
+  applicationConnectors:
+  - type: http
+    port: 8989
