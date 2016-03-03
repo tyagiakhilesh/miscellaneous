@@ -1,0 +1,63 @@
+
+docker inspect
+docker exec -ti 
+doceker rm -v
+docker rmi
+
+
+docker inspect   --format='{{.Config.Env}}  {{.Config.Entrypoint}}' e8f63f961ed8
+
+
+mvn dependency:build-classpath
+mvn compile
+mvn clean
+mvn install
+mvn package
+mvn build
+
+
+Command to run archive on local system that didn't work.
+java -Xmx256m -Dcaf.appname=aspen/archive/v1 -Dconfig.rest.host=http://16.103.34.142:80/ -cp "$CLASSPATH":target/archive-1.0.jar com.hpe.aspen.archive.StorageApplication  server aspen-archive.yaml
+
+# Command to mount NextGen windows share on centos
+sudo  mount -t cifs //16.184.22.199/BigData/ /mnt/aspen_share/ -o username=bigdata1,password=bigdata1
+
+To drop a schema in vertica
+
+drop schema aspen.account_49874150889620480 cascade
+
+git log -p <fileName>
+
+GIT WORKFLOW
+
+I created a branch ASP-1413.
+Then made my changes. Had multile commits there.
+Then I went to sprint-26 branch
+Ran git merge ASP-1413 // this merges my changes with the branch sprint-26.
+then I trid to sqash my changes by git rebase -i origin/sprint-26 // while I am still on sprint-26 branch.
+but then I hit the problem Cannot 'squash' without a previous commit message. 
+
+at this point when I saw the git branch, it was in some rebasing state.
+
+so I had to do git rebase --abort
+
+by this I could return back to sprint-26 branch. Now I have to again work to squash changes.
+
+
+THis is the link that helped my coming out of this rebase thing situation: http://stackoverflow.com/questions/2563632/how-can-i-merge-two-commits-into-one
+
+########################################################
+
+To create user in vertica: dbadmin-> create user akhilesh identified by 'User1234';
+
+
+########################################################
+
+Sometime while using volumes with docker, you might see that docker container is not able to see the mounted volume inside it.
+ls -l  shall give you permissions like 
+
+1000 1000
+
+For that case, use privileged=true option with docker run. Like this: [developer@localhost:1 ~/repo/aspen/aspen/aspen-containers/admin-ui-container/target]$  sudo docker run --privileged=true -d -p 63372:8080 -v /tmp/:/usr/local/tomcat/webapps/config aspen/admin-ui-container:latest
+
+########################################################
