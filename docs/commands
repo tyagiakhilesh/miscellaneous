@@ -61,3 +61,23 @@ ls -l  shall give you permissions like
 For that case, use privileged=true option with docker run. Like this: [developer@localhost:1 ~/repo/aspen/aspen/aspen-containers/admin-ui-container/target]$  sudo docker run --privileged=true -d -p 63372:8080 -v /tmp/:/usr/local/tomcat/webapps/config aspen/admin-ui-container:latest
 
 ########################################################
+
+#####################################################################
+To start tomcat in debug mode
+#####################################################################
+
+Add below variable, to CATALINA_HOME/bin/setenv.sh
+
+	export JPDA_OPTS="-agentlib:jdwp=transport=dt_socket, address=1043, server=y, suspend=n"
+
+
+#################################################################
+To kill vertica sessions, you can use this command
+
+select E'SELECT CLOSE_SESSIOn(\'' || session_id || E'\');' from sessions;
+
+This shall return you a list output. Select session that you want to close, just copy relevant line and paste and hit enter.
+
+[developer@localhost:0 ~/work/notes]$ 
+
+
