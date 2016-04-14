@@ -1,0 +1,13 @@
+
+Some times VMWare just simple don't connect the VM to internet.
+
+Troubleshooting:
+
+Check in Virtual Network Editor if the Network adapter that you are using has 
+DHCP enabled for it. If not then, select the adapater, un check DHCP for adapter. Apply changes. Then check back the DHCP for adapter. Then Again apply back.
+
+
+(I got to know that DHCP was problem by running the window's diagonostic on aadapter from control panel -> network adapter's window)
+
+Then once the DHCP is enabled, then come back to you VM. Shut it down. Remove teh network. And apply. Add netowrk again. Select the adapter. And start the VM again.
+
