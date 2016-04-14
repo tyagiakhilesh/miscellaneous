@@ -81,3 +81,9 @@ This shall return you a list output. Select session that you want to close, just
 [developer@localhost:0 ~/work/notes]$ 
 
 
+#####################################################################
+To allow a port from firewall:
+#####################################################################
+
+iptables -A INPUT -p http --dport 3000 -j ACCEPT
+#####################################################################
