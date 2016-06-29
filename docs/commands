@@ -93,3 +93,4 @@ iptables -A INPUT -p http --dport 3000 -j ACCEPT
 To run jenkins docker instance
  docker run -p 8088:8088 -p 50000:50000 -v /root/jenkins_home:/var/jenkins_home -d jenkins
  (you shall have to create /root/jenkins_home directory; 8080 is port inside the container mapped to 8088 to host running the container)
+**************
