@@ -87,3 +87,5 @@ To allow a port from firewall:
 
 iptables -A INPUT -p http --dport 3000 -j ACCEPT
 #####################################################################
+./deploy-workers.sh -a archive-node,admin-node,view-node -d marathon_ip=16.103.36.60 -d postgres_ip=16.103.36.60 -d imagetag=latest -- -Dvertica.host=16.103.35.155
+./initjobservicedb.sh -h 16.103.36.60 -u postgres -p postgres
