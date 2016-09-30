@@ -1,0 +1,15 @@
+******************
+All Domain controllers are not responding: (Exchange server related problem)
+https://technet.microsoft.com/en-us/library/bb218446(v=exchg.80).aspx
+
+how to know domain controllers name
+http://serverfault.com/questions/78089/find-name-of-active-directory-domain-controller
+Start -> Run -> nslookup    
+set type=all
+_ldap._tcp.dc._msdcs.<ACTUAL_DOMAIN_NAME>
+
+it has command to check how to check domain controller health
+
+*****************
+TO run a domain controller
+
