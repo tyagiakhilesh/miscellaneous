@@ -13,3 +13,20 @@ it has command to check how to check domain controller health
 *****************
 TO run a domain controller
 
+*****************
+Active Directory Domain Service: (full ref here: https://technet.microsoft.com/library/hh831484.aspx ) - must read to understand forest too
+AD DS provides a distributed database that stores and manages information about network resources and application-specific data from directory-enabled applications.
+
+A server that is running AD DS is called a domain controller.
+
+AD DS
+  * organize elements of a network
+  * into a hierarchical containment structure
+    # Active Directory forest, domains in the forest, and organizational units (OUs) in each domain
+  * provide identity, authentication and trust identity ntework wide
+  * provided logon authentication and access control
+  
+  
+
+directory-enabled applications
+
