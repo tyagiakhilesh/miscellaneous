@@ -46,7 +46,7 @@ Then I created another server 2012 r2 to install xchange.
 Before that I needed to have this new instance of r2 in domain that I created above for that, I used this link: https://www.youtube.com/watch?v=amzSIpx9fvA
 
 While adding machine to domain, I got AD not accessible error. To resolved that, I changed the IPv4 DNS settings on this new r2 to point to machine 
-where AD is running.
+where AD is running. This soulution shall work too probably: http://www.itexperience.net/2014/06/06/an-active-directory-domain-controller-ad-dc-for-the-domain-x-x-com-could-not-be-contacted-windows-azure/
 
 Finally, I logged into this new r2 as a domain user and simply right click on SetUp.exe -> Run as administrator. Done.
 
