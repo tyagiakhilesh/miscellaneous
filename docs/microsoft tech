@@ -30,3 +30,24 @@ AD DS
 
 directory-enabled applications
 
+
+
+
+###############################################################
+Setting up Exchange Server 2013
+###############################################################
+
+First step is to setup AD DC. Used server 2012 r2
+I used this link: https://www.youtube.com/watch?v=0WyBxwJD_c0
+Here I only installed AD and DHCP and DNS. 
+And while Configuring DHCP, I gave DNS server details that are applicable for vCloud VMs.
+
+Then I created another server 2012 r2 to install xchange.
+Before that I needed to have this new instance of r2 in domain that I created above for that, I used this link: https://www.youtube.com/watch?v=amzSIpx9fvA
+
+While adding machine to domain, I got AD not accessible error. To resolved that, I changed the IPv4 DNS settings on this new r2 to point to machine 
+where AD is running.
+
+Finally, I logged into this new r2 as a domain user and simply right click on SetUp.exe -> Run as administrator. Done.
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
