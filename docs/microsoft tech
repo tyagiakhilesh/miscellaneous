@@ -51,3 +51,14 @@ where AD is running. This soulution shall work too probably: http://www.itexperi
 Finally, I logged into this new r2 as a domain user and simply right click on SetUp.exe -> Run as administrator. Done.
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+###############################################################
+Remote Desktop COnnection problem after adding the machine to domain.
+###############################################################
+
+remote desktop this computer can't connect to the remote computer
+
+What I did was: I added the user into the remote desktop group on the AD
+as well as on the computer, I went ahead and serached for setting in R2 server Select Users who can Remote Desktop into machine.
+
+There I went ahaed and added the domain user.
