@@ -30,3 +30,6 @@ Scenario 3: The login may use Windows Authentication but the login is an unrecog
 
 An unrecognized Windows principal means that Windows can't verify the login. This might be because the Windows login is from an untrusted domain. To resolve this issue, verify that you are logged in to the correct domain.
 ```
+
+Mostly reason for this above error was: I installed the SQL as domain user. Domain of machine was moved. Now I am logging in as Local Admini
+strtor, which ofcourse doesn't have the permission to login into the system. So uninstalled and re installed the SQL instance.
