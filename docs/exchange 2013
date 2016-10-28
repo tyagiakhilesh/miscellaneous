@@ -7,5 +7,9 @@ Get-Service | Where-Object { $_.DisplayName –ilike “Microsoft Exchange *” 
 Get-Service | Where-Object { $_.DisplayName –ilike “Microsoft Exchange *” } | Start-Service
 
 
+This started all the xchg services except transport service. That kept saying: Dependency service or group failed to start.
+
+Checked if ipv6 was enabled? It was not. Enabled it and trying again.
+
 Login to exchange 2013 admin console from here:
 https://localhost/ecp/?ExchClientVer=15
