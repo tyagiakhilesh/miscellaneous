@@ -12,3 +12,21 @@ Once I changed that to AUTHORITY\NETWORK SERVICE, then I could do away with that
 of the error.
 * Finally I checked, on what port was MSSQLServer was running. Found out that it was using dynamic port. 1433 was missing. SO added that, then 
 VOILA!!
+
+## Second Problem: Enabling the SQL auth mode for the db
+
+* Make sure you enable the sa login account first. By default its disabled.
+* Once that is done, simply right click the instance (after logging into it through windows auth mode), Got to security. Check SQL server and Window .. Ok.
+* Done.
+
+## Login failed for user while trying to connect to MSSQL
+This [link](https://support.microsoft.com/en-us/kb/555332)
+```
+Login failed for user '<user_name>'. (Microsoft SQL Server, Error: 18456)
+```
+SO I recently changed the domain of this machine (it was different when I installed the SQLSERVR) and the same is the reason for above.
+```
+Scenario 3: The login may use Windows Authentication but the login is an unrecognized Windows principal
+
+An unrecognized Windows principal means that Windows can't verify the login. This might be because the Windows login is from an untrusted domain. To resolve this issue, verify that you are logged in to the correct domain.
+```
