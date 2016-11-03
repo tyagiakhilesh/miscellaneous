@@ -14,3 +14,5 @@ Here I saw that Append these DNS suffix (in order) was radio buttonned and it ha
 #### Real key to solve the issue
 
 In reality the main problem is resolving the path to autodiscover.mydomain.com. Use nslookup to find out if the paths being tried for discovering the service are indeed reachable or not. Which paths are being probed actually, can be found out via: microsoft connectivity tools : [here this link](https://testconnectivity.microsoft.com)
+
+I simply created a CNAME entry in my DNS domain.
