@@ -28,6 +28,10 @@ GROUP BY TYPE
 select count(*) as TablesCount from sys.tables
 select count(*) as ProceduresCount from sys.procedures
 ```
+### TO look at definition of a procedure
+```
+EXEC sp_helptext N'archive_device_get_null_devices'
+```
 
 # References
 ## [object counts](http://stackoverflow.com/questions/19314370/how-to-count-total-number-of-stored-procedure-and-tables-in-sql-server-2008)
