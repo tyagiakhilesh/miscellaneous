@@ -26,3 +26,7 @@ Start-Transcript -path C:\output.txt -append
 # do some stuff
 Stop-Transcript
 ```
+
+## Customizing powershell 
+
+(This is a good reference)[https://git-scm.com/book/uz/v2/Git-in-Other-Environments-Git-in-Powershell]
