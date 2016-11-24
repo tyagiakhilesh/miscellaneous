@@ -7,17 +7,21 @@
  ```
 
 ## tail equivlant 
+```
 Get-Content -Path .\Logs\SystemManager.log -Wait
+```
 
 ## Grep equivalent
+```
 select-string .\*.* -pattern "evildoer"
+```
 
 ## redirecting output to a file
-
+```
 $ErrorActionPreference="SilentlyContinue"
 Stop-Transcript | out-null
 $ErrorActionPreference = "Continue"
 Start-Transcript -path C:\output.txt -append
 # do some stuff
 Stop-Transcript
- 
+```
