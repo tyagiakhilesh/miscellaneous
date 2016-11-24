@@ -14,6 +14,7 @@ Get-Content -Path .\Logs\SystemManager.log -Wait
 ## Grep equivalent
 ```
 select-string .\*.* -pattern "evildoer"
+Get-ChildItem -recurse | Select-String -pattern "dummy" | group path | select name
 ```
 
 ## redirecting output to a file
