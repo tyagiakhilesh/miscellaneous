@@ -20,3 +20,14 @@ I simply created a CNAME entry in my DNS domain.
 #### autodiscovering randomly passing and failing
 
 I unchecked these two options: Register this connection's addresses in DNS, Use this connection's DNS suffix in DNS registration. And this seems to have stablized the autodiscovery.
+
+
+## Autodiscovery Process explained below
+Lookup Exchange Auto Discovery    
+	- used by exchange web services to discover user and its mailbox in exchange environment    
+	- scp records stored in active directory schema;     
+	- goes to domain server    
+	- then to exchange service from there    
+	- then to scp records of all the users for that xchange server    
+	- then looks at PRIMARY SMTP address (only unique property in exchange)    
+	- using that primary smtp address, shall get unique exchange url 
