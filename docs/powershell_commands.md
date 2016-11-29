@@ -35,3 +35,16 @@ Stop-Transcript
 ## Customizing powershell 
 
 [This is a good reference](https://git-scm.com/book/uz/v2/Git-in-Other-Environments-Git-in-Powershell)
+
+## Find files with a name pattern
+```
+Get-ChildItem -Filter
+Get-ChildItem *.txt
+Get-ChildItem -Exclude *.txt
+Get-ChildItem -Include *.txt -Recurse
+```
+
+## Opening another powershell window from powershell
+```
+start powershell
+```
