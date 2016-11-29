@@ -48,3 +48,20 @@ Get-ChildItem -Include *.txt -Recurse
 ```
 start powershell
 ```
+## Finding file, doing something like xargs and concatanation of files
+```
+Get-Content files.* | Set-Content newfile.fileÎ
+cat example*.txt | sc allexamples.txt
+Get-ChildItem -include "HPCA802_[0-9][0-9]_update_central_sa.sql" -recurse -name | ForEach-Object {Get-Content $_ | Set-Content finalOutput.sql}
+```
+
+Finally after going through rounds, this worked for me.
+```
+Get-ChildItem -include "HPCA802_[0-9][0-9]_update_central_sa.sql" -recurse  | foreach-object { $name=$_.FullName; get-content $name } | Set-Content concat.sql
+```
+
+
+## Counting lines and all in a file
+```
+ Get-ChildItem -include "HPCA802_[0-9][0-9]_update_central_sa.sql" -recurse -name | ForEach-Object {Get-Content $_ | Measure-Object -Line}
+```
